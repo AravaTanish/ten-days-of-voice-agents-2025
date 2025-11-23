@@ -17,6 +17,8 @@ from livekit.agents import (
 )
 from livekit.plugins import murf, silero, google, deepgram, noise_cancellation
 from livekit.plugins.turn_detector.multilingual import MultilingualModel
+from livekit.agents import function_tool, RunContext
+import json
 
 logger = logging.getLogger("agent")
 
@@ -24,14 +26,78 @@ load_dotenv(".env.local")
 
 
 class Assistant(Agent):
-    def __init__(self) -> None:
+    def __init__(self):
+        self.order = {
+            "drinkType": None,
+            "size": None,
+            "milk": None,
+            "extras": [],
+            "name": None
+        }
         super().__init__(
-            instructions="""You are a helpful voice AI assistant. The user is interacting with you via voice, even if you perceive the conversation as text.
-            You eagerly assist users with their questions by providing information from your extensive knowledge.
-            Your responses are concise, to the point, and without any complex formatting or punctuation including emojis, asterisks, or other symbols.
-            You are curious, friendly, and have a sense of humor.""",
+            instructions="""
+        You are a friendly coffee shop barista for Starbucks (or any brand you want).
+        Your job is to take the customer's order through voice.
+
+        RULES:
+        1. Maintain this order structure:
+        {
+        "drinkType": "string",
+        "size": "string",
+        "milk": "string",
+        "extras": ["string"],
+        "name": "string"
+        }
+
+        2. Ask ONE clarifying question at a time until all fields are filled:
+        - What drink would you like?
+        - What size?
+        - Any milk preference?
+        - Any extras?
+        - May I have your name?
+
+        3. Once the order is complete, call the tool save_order with all the order details.
+
+        4. Speak like a friendly barista.
+        5. Keep responses short and simple.
+        """,
         )
 
+    @function_tool
+    async def save_order(
+        self, 
+        context: RunContext,
+        drink_type: str,
+        size: str,
+        milk: str,
+        extras: list[str],
+        name: str
+    ):
+        """Save the complete customer order to a JSON file.
+        
+        Args:
+            drink_type: The type of drink (e.g., latte, cappuccino, americano)
+            size: The size of the drink (e.g., tall, grande, venti)
+            milk: The type of milk (e.g., whole, oat, almond, soy)
+            extras: List of extra items (e.g., extra shot, whipped cream, vanilla syrup)
+            name: Customer's name for the order
+        """
+        self.order = {
+            "drinkType": drink_type,
+            "size": size,
+            "milk": milk,
+            "extras": extras,
+            "name": name
+        }
+        
+        try:
+            with open("order_summary.json", "w") as f:
+                json.dump(self.order, f, indent=2)
+            logger.info(f"Order saved successfully: {self.order}")
+            return f"Perfect! I've saved your order for {name}. Your {size} {drink_type} with {milk} milk will be ready soon!"
+        except Exception as e:
+            logger.error(f"Error saving order: {e}")
+            return "I apologize, there was an issue saving your order. Please let me know if you'd like to try again."
     # To add tools, use the @function_tool decorator.
     # Here's an example that adds a simple weather tool.
     # You also have to add `from livekit.agents import function_tool, RunContext` to the top of this file

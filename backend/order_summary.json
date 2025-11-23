@@ -1,0 +1,10 @@
+{
+  "drinkType": "Cappuccino",
+  "size": "medium",
+  "milk": "regular milk",
+  "extras": [
+    "chocolate chips",
+    "whipped cream"
+  ],
+  "name": "Sam"
+}
