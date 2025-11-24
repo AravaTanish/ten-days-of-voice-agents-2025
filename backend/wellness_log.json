@@ -1,0 +1,26 @@
+{
+  "sessions": [
+    {
+      "date": "2025-11-24",
+      "time": "12:24:00",
+      "mood": "stressed",
+      "energy": "low",
+      "goals": [
+        "complete syllabus",
+        "play video games"
+      ],
+      "notes": "User is feeling stressed with low energy and plans to complete syllabus and play video games."
+    },
+    {
+      "date": "2025-11-24",
+      "time": "12:35:36",
+      "mood": "disappointed",
+      "energy": "medium",
+      "goals": [
+        "complete syllabus",
+        "go for sports"
+      ],
+      "notes": "Felt a little down about not completing the syllabus yesterday."
+    }
+  ]
+}
