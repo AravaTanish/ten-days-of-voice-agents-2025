@@ -1,0 +1,43 @@
+{
+  "order_id": "BLK20251128122149",
+  "timestamp": "2025-11-28T12:21:49.032015",
+  "items": [
+    {
+      "id": "snack_001",
+      "name": "Potato Chips",
+      "price": 20,
+      "unit": "50g",
+      "quantity": 2.0
+    },
+    {
+      "id": "pantry_001",
+      "name": "Pasta",
+      "price": 80,
+      "unit": "500g",
+      "quantity": 1
+    },
+    {
+      "id": "pantry_002",
+      "name": "Pasta Sauce",
+      "price": 150,
+      "unit": "400g",
+      "quantity": 1
+    },
+    {
+      "id": "veg_001",
+      "name": "Tomatoes",
+      "price": 40,
+      "unit": "kg",
+      "quantity": 1
+    },
+    {
+      "id": "veg_004",
+      "name": "Capsicum",
+      "price": 60,
+      "unit": "kg",
+      "quantity": 1
+    }
+  ],
+  "total": 370.0,
+  "status": "placed"
+}

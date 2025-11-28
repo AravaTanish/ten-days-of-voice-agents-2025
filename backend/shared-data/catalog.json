@@ -1,0 +1,168 @@
+{
+  "categories": {
+    "vegetables": [
+      {
+        "id": "veg_001",
+        "name": "Tomatoes",
+        "price": 40,
+        "unit": "kg",
+        "tags": ["fresh", "vegetable"]
+      },
+      {
+        "id": "veg_002",
+        "name": "Onions",
+        "price": 35,
+        "unit": "kg",
+        "tags": ["fresh", "vegetable"]
+      },
+      {
+        "id": "veg_003",
+        "name": "Potatoes",
+        "price": 30,
+        "unit": "kg",
+        "tags": ["fresh", "vegetable"]
+      },
+      {
+        "id": "veg_004",
+        "name": "Capsicum",
+        "price": 60,
+        "unit": "kg",
+        "tags": ["fresh", "vegetable"]
+      }
+    ],
+    "dairy": [
+      {
+        "id": "dairy_001",
+        "name": "Milk",
+        "price": 60,
+        "unit": "1L",
+        "brand": "Amul",
+        "tags": ["dairy"]
+      },
+      {
+        "id": "dairy_002",
+        "name": "Butter",
+        "price": 50,
+        "unit": "100g",
+        "brand": "Amul",
+        "tags": ["dairy"]
+      },
+      {
+        "id": "dairy_003",
+        "name": "Cheese Slices",
+        "price": 120,
+        "unit": "200g",
+        "brand": "Britannia",
+        "tags": ["dairy"]
+      },
+      {
+        "id": "dairy_004",
+        "name": "Yogurt",
+        "price": 40,
+        "unit": "400g",
+        "brand": "Mother Dairy",
+        "tags": ["dairy"]
+      }
+    ],
+    "pantry": [
+      {
+        "id": "pantry_001",
+        "name": "Pasta",
+        "price": 80,
+        "unit": "500g",
+        "brand": "Del Monte",
+        "tags": ["pantry", "pasta"]
+      },
+      {
+        "id": "pantry_002",
+        "name": "Pasta Sauce",
+        "price": 150,
+        "unit": "400g",
+        "brand": "Kissan",
+        "tags": ["pantry", "sauce"]
+      },
+      {
+        "id": "pantry_003",
+        "name": "Bread",
+        "price": 40,
+        "unit": "400g",
+        "brand": "Britannia",
+        "tags": ["pantry", "bakery"]
+      },
+      {
+        "id": "pantry_004",
+        "name": "Peanut Butter",
+        "price": 180,
+        "unit": "340g",
+        "brand": "Sundrop",
+        "tags": ["pantry", "spread"]
+      },
+      {
+        "id": "pantry_005",
+        "name": "Rice",
+        "price": 200,
+        "unit": "5kg",
+        "brand": "India Gate",
+        "tags": ["pantry", "grains"]
+      }
+    ],
+    "snacks": [
+      {
+        "id": "snack_001",
+        "name": "Potato Chips",
+        "price": 20,
+        "unit": "50g",
+        "brand": "Lays",
+        "tags": ["snacks"]
+      },
+      {
+        "id": "snack_002",
+        "name": "Chocolate Bar",
+        "price": 40,
+        "unit": "50g",
+        "brand": "Dairy Milk",
+        "tags": ["snacks", "chocolate"]
+      },
+      {
+        "id": "snack_003",
+        "name": "Cookies",
+        "price": 30,
+        "unit": "100g",
+        "brand": "Parle-G",
+        "tags": ["snacks", "biscuits"]
+      }
+    ],
+    "beverages": [
+      {
+        "id": "bev_001",
+        "name": "Coffee Powder",
+        "price": 250,
+        "unit": "200g",
+        "brand": "Nescafe",
+        "tags": ["beverages"]
+      },
+      {
+        "id": "bev_002",
+        "name": "Tea",
+        "price": 150,
+        "unit": "250g",
+        "brand": "Tata Tea",
+        "tags": ["beverages"]
+      },
+      {
+        "id": "bev_003",
+        "name": "Soft Drink",
+        "price": 40,
+        "unit": "750ml",
+        "brand": "Coca Cola",
+        "tags": ["beverages"]
+      }
+    ]
+  },
+  "recipes": {
+    "pasta": ["pantry_001", "pantry_002", "veg_001", "veg_004"],
+    "peanut butter sandwich": ["pantry_003", "pantry_004"],
+    "tea": ["bev_002", "dairy_001"],
+    "breakfast": ["pantry_003", "dairy_002", "dairy_001"]
+  }
+}
