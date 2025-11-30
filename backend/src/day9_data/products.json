@@ -1,0 +1,106 @@
+[
+  {
+    "id": "mug-001",
+    "name": "Stoneware Coffee Mug",
+    "description": "Classic white ceramic mug, 350ml capacity",
+    "price": 800,
+    "currency": "INR",
+    "category": "mug",
+    "color": "white",
+    "attributes": {
+      "material": "ceramic",
+      "capacity": "350ml"
+    }
+  },
+  {
+    "id": "mug-002",
+    "name": "Blue Ceramic Mug",
+    "description": "Ocean blue ceramic mug, 400ml capacity",
+    "price": 950,
+    "currency": "INR",
+    "category": "mug",
+    "color": "blue",
+    "attributes": {
+      "material": "ceramic",
+      "capacity": "400ml"
+    }
+  },
+  {
+    "id": "tshirt-001",
+    "name": "Cotton T-Shirt",
+    "description": "Comfortable cotton t-shirt in black",
+    "price": 750,
+    "currency": "INR",
+    "category": "tshirt",
+    "color": "black",
+    "attributes": {
+      "material": "100% cotton",
+      "sizes": ["S", "M", "L", "XL"]
+    }
+  },
+  {
+    "id": "tshirt-002",
+    "name": "Premium White T-Shirt",
+    "description": "Premium quality white cotton t-shirt",
+    "price": 900,
+    "currency": "INR",
+    "category": "tshirt",
+    "color": "white",
+    "attributes": {
+      "material": "100% cotton",
+      "sizes": ["S", "M", "L", "XL"]
+    }
+  },
+  {
+    "id": "hoodie-001",
+    "name": "Black Pullover Hoodie",
+    "description": "Warm black hoodie with front pocket",
+    "price": 1800,
+    "currency": "INR",
+    "category": "hoodie",
+    "color": "black",
+    "attributes": {
+      "material": "cotton blend",
+      "sizes": ["S", "M", "L", "XL"]
+    }
+  },
+  {
+    "id": "hoodie-002",
+    "name": "Grey Zip Hoodie",
+    "description": "Grey hoodie with full zip closure",
+    "price": 2100,
+    "currency": "INR",
+    "category": "hoodie",
+    "color": "grey",
+    "attributes": {
+      "material": "cotton blend",
+      "sizes": ["S", "M", "L", "XL"]
+    }
+  },
+  {
+    "id": "bottle-001",
+    "name": "Stainless Steel Water Bottle",
+    "description": "Insulated steel bottle, keeps cold for 24hrs",
+    "price": 1200,
+    "currency": "INR",
+    "category": "bottle",
+    "color": "silver",
+    "attributes": {
+      "material": "stainless steel",
+      "capacity": "750ml"
+    }
+  },
+  {
+    "id": "cap-001",
+    "name": "Baseball Cap",
+    "description": "Adjustable cotton baseball cap",
+    "price": 600,
+    "currency": "INR",
+    "category": "cap",
+    "color": "navy",
+    "attributes": {
+      "material": "cotton",
+      "adjustable": true
+    }
+  }
+]
